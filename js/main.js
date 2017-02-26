@@ -29,6 +29,9 @@ requirejs.config({
 		bootstrap: {
 			deps: ['jQuery']
 		},
+		common:{
+			deps: ['jQuery']
+		}
 	}
 
 });
@@ -40,7 +43,7 @@ require(['jQuery','bootstrap','nprogress','common'],function () {
 (function(window) {
 
 	var pathname = window.location.pathname;
-	console.log(pathname);
+
 
 	switch(pathname) {
 		case '/html/user/user_list.html':
