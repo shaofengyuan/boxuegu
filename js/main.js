@@ -3,7 +3,7 @@ requirejs.config({
 	paths: {
 
 		// 第三方库的路径配置
-		jQuery: 'lib/jquery/jquery.min',
+		jquery: 'lib/jquery/jquery.min',
 		bootstrap: 'lib/bootstrap/js/bootstrap.min',
 		nprogress:'lib/nprogress/nprogress',
 		common: 'js/common',
@@ -27,16 +27,16 @@ requirejs.config({
 	},
 	shim: {
 		bootstrap: {
-			deps: ['jQuery']
+			deps: ['jquery']
 		},
-		common:{
-			deps: ['jQuery']
-		}
+		// common:{
+		// 	deps: ['jquery']
+		// }
 	}
 
 });
 
-require(['jQuery','bootstrap','nprogress','common'],function () {
+require(['jquery','bootstrap','nprogress','common'],function () {
 	console.log(123);
 });
 
