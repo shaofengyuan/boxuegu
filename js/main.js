@@ -35,57 +35,57 @@ requirejs.config({
 
 require(['jQuery','bootstrap','nprogress','common'],function () {
 	console.log(123);
-	console.log(window);
-	console.log(window.location.pathname);
 });
 
 (function(window) {
 
 	var pathname = window.location.pathname;
+	console.log(pathname);
+
 	switch(pathname) {
-		case '/html/user/list.html':
+		case '/html/user/user_list.html':
 			require(['userList']);
 			break;
-		case '/html/user/profile.html':
+		case '/html/user/user_profile.html':
 			require(['userProfile']);
 			break;
-		case '/html/teacher/add':
+		case '/html/teacher/teacher_add.html':
 			require(['teacherAdd']);
 			break;
-		case '/html/teacher/list':
+		case '/html/teacher/teacher_list.html':
 			require(['teacherList']);
 			break;
 		case '/html/home/login':
 			require(['homeLogin']);
 			break;
-		case '/html/home/repass':
+		case '/html/home/repass.html':
 			require(['homeRepass']);
 			break;
-		case '/html/home/setting':
+		case '/html/home/settings.html':
 			require(['homeSetting']);
 			break;
-		case '/html/course/add':
+		case '/html/course/course_add.html':
 			require(['courseAdd']);
 			break;
-		case '/html/course/add_step1':
+		case '/html/course/course_add_step1.html':
 			require(['courseAddStep1']);
 			break;
-		case '/html/course/add_step2':
+		case '/html/course/course_add_step2.html':
 			require(['courseAddStep2']);
 			break;
-		case '/html/course/add_step3':
+		case '/html/course/course_add_step3.html':
 			require(['courseAddStep3']);
 			break;
-		case '/html/course/category':
+		case '/html/course/course_category.html':
 			require(['courseCategory']);
 			break;
-		case '/html/course/category_add':
+		case '/html/course/course_category_add.html':
 			require(['courseCategoryAdd']);
 			break;
-		case '/html/course/list':
+		case '/html/course/course_list.html':
 			require(['courseCategoryList']);
 			break;
-		case '/html/course/topic':
+		case '/html/course/course_topic.html':
 			require(['courseCategoryTopic']);
 			break;
 	}
