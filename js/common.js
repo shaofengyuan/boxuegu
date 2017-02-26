@@ -1,4 +1,4 @@
-define(["jQuery","nprogress"],function($,NProgress){
+define(["jQuery","nprogress"],function(a,NProgress){
 	NProgress.start();
 
 	NProgress.done();

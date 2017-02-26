@@ -1,3 +1,3 @@
-defined(['jQuery'],function ($) {
+define(['jQuery'],function ($) {
 	console.log('user-profile');
 })

@@ -35,6 +35,8 @@ requirejs.config({
 
 require(['jQuery','bootstrap','nprogress','common'],function () {
 	console.log(123);
+	console.log(window);
+	console.log(window.location.pathname);
 });
 
 (function(window) {
@@ -47,43 +49,43 @@ require(['jQuery','bootstrap','nprogress','common'],function () {
 		case '/html/user/profile.html':
 			require(['userProfile']);
 			break;
-		case 'js/teacher/add':
+		case '/html/teacher/add':
 			require(['teacherAdd']);
 			break;
-		case 'js/teacher/list':
+		case '/html/teacher/list':
 			require(['teacherList']);
 			break;
-		case 'js/home/login':
+		case '/html/home/login':
 			require(['homeLogin']);
 			break;
-		case 'js/home/repass':
+		case '/html/home/repass':
 			require(['homeRepass']);
 			break;
-		case 'js/home/setting':
+		case '/html/home/setting':
 			require(['homeSetting']);
 			break;
-		case 'js/course/add':
+		case '/html/course/add':
 			require(['courseAdd']);
 			break;
-		case 'js/course/add_step1':
+		case '/html/course/add_step1':
 			require(['courseAddStep1']);
 			break;
-		case 'js/course/add_step2':
+		case '/html/course/add_step2':
 			require(['courseAddStep2']);
 			break;
-		case 'js/course/add_step3':
+		case '/html/course/add_step3':
 			require(['courseAddStep3']);
 			break;
-		case 'js/course/category':
+		case '/html/course/category':
 			require(['courseCategory']);
 			break;
-		case 'js/course/category_add':
+		case '/html/course/category_add':
 			require(['courseCategoryAdd']);
 			break;
-		case 'js/course/list':
+		case '/html/course/list':
 			require(['courseCategoryList']);
 			break;
-		case 'js/course/topic':
+		case '/html/course/topic':
 			require(['courseCategoryTopic']);
 			break;
 	}
