@@ -1,3 +1,20 @@
-define(['jquery'],function ($) {
-	console.log('teacher-list');
+define(['jquery','template','common'],function ($,template,undefined) {
+
+	//渲染讲师列表
+	$.get('/v6/teacher',function (data) {
+		if (data.code==200){
+			var html = template('teacher-list-tpl',data);
+			$('#teacher-lists').html(html);
+		}
+	});
+
+	//然后获取讲师详细信息并展示。
+	$('#teacher-lists').on('click',".teacher-view",function () {
+		$.get('/v6/teacher/view',{tc_id:$(this).parent().attr('data-id')},function (data) {
+			var html = template('teacher-view-tpl',data.result);
+			$('#teacherModal').html(html);
+			console.log(data);
+		})
+	})
+
 })
