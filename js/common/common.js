@@ -1,7 +1,16 @@
 define(["jquery","nprogress"],function($,NProgress){
-	// 左侧导航下拉列表
+	//进度条
 	NProgress.start();
 	NProgress.done();
+
+	//ajax请求loading
+	$(document).ajaxStart(function () {
+		$('.overlay').show();
+	}).ajaxStop(function () {
+		$('.overlay').hide();
+	})
+
+	// 左侧导航下拉列表
 	$('.navs ul').prev('a').on('click', function () {
 		$(this).next().slideToggle();
 	});

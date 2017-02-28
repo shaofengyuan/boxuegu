@@ -7,9 +7,11 @@ requirejs.config({
 		bootstrap: 'lib/bootstrap/js/bootstrap.min',
 		jqureyCookie:'lib/jquery-cookie/jquery.cookie',
 		nprogress:'lib/nprogress/nprogress',
+		template: 'lib/artTemplate-3.0.1/template',
 		common: 'js/common/common',
 
 		// 自己写的路径配置
+		index:'js/index',
 		userList: 'js/user/list',
 		userProfile: 'js/user/profile',
 		teacherAdd: 'js/teacher/add',
@@ -36,7 +38,10 @@ requirejs.config({
 	}
 
 });
-
+//进度条
+require(['nprogress'],function (nprogress) {
+	nprogress.start();
+})
 require(['jquery','bootstrap','common']);
 
 (function(window) {
@@ -61,6 +66,9 @@ require(['jquery','bootstrap','common']);
 		}
 
 		switch(pathname) {
+			case '/':
+				require(['index']);
+				break;
 			case '/html/user/user_list.html':
 				require(['userList']);
 				break;
