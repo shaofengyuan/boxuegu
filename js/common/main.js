@@ -16,7 +16,7 @@ requirejs.config({
 		teacherList: 'js/teacher/list',
 		homeLogin: 'js/home/login',
 		homeRepass: 'js/home/repass',
-		homeSetting: 'js/home/setting',
+		homeSetting: 'js/home/settings',
 		courseAdd: 'js/course/add',
 		courseAddStep1: 'js/course/add_step1',
 		courseAddStep2: 'js/course/add_step2',

@@ -6,9 +6,10 @@ define(["jquery","nprogress"],function($,NProgress){
 		$(this).next().slideToggle();
 	});
 
+
 	//左侧导航点击到哪个，哪个就显示出来
-	var pathname = window.location.href;//先获取当前页面的路径
-	$('.navs a').removeClass('active').filter('href="'+pathname+'"').addClass('active').parents('ul').show();
+	var pathname = window.location.pathname;//先获取当前页面的路径
+	$('.navs a').removeClass('active').filter('[href="'+pathname+'"]').addClass('active').parents('ul').show();
 
 
 	//退出功能
@@ -31,7 +32,7 @@ define(["jquery","nprogress"],function($,NProgress){
 	}
 
 	// 然后展示到左侧导航
-	$('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name: 'dagenimeiminga');
+	$('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name: 'doudou');
 	$('.aside .profile img').attr('src', userInfo.tc_avatar? userInfo.tc_avatar: '/images/default.png');
 
 
