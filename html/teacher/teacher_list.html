@@ -70,12 +70,12 @@
                 <td>{{ tea.tc_birthday }}</td>
                 <td>{{ tea.tc_email }}</td>
                 <td>{{ tea.tc_join_date }}</td>
-                <td data-id="{{ tea.tc_id }}">
+                <td data-id="{{ tea.tc_id }}" data-status="{{ tea.tc_status }}">
                 <a href="#teacherModal" data-toggle="modal" class="btn btn-info btn-xs teacher-view">查 看</a>
                 <a href="teacher_add.html" class="btn btn-info btn-xs">编 辑</a>
-                <a href="javascript:void(0)" class="btn btn-warning btn-xs">注 销</a>
+                <a href="javascript:void(0)" class="btn btn-warning btn-xs teacher-status">{{ tea.tc_status==0?'开启':'注销' }}</a>
                 </td>
-            </tr>o
+            </tr>
         {{ /each }}
     </script>
 
@@ -124,8 +124,6 @@
 								    </div>
 								</td>
 								</tr>
-
-
                         </tbody>
                     </table>
                 </div>
