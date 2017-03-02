@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
+    <link rel="stylesheet" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link href="/lib/Datepicker/css/foundation.min.css" rel="stylesheet" type="text/css">
+    <link href="/lib/Datepicker/css/foundation-datepicker.css" rel="stylesheet" type="text/css">
     <?php include('../common/style.html')?>
 </head>
 <body>
@@ -33,7 +36,7 @@
                 <input type="text" name="tc_name" value="{{tc_name}}" class="form-control input-sm" placeholder="讲师名称">
             </div>
         </div>
-<!--//判断是编辑还是添加，如果有tc_id就是编辑，没有就是添加-->
+        <!--//判断是编辑还是添加，如果有tc_id就是编辑，没有就是添加-->
         {{ if !tc_id }}
 
         <div class="form-group">
@@ -46,7 +49,7 @@
         <div class="form-group">
             <label for="" class="col-xs-3 control-label">入职时间</label>
             <div class="col-xs-4">
-                <input type="text" name="tc_join_date" value="{{tc_join_date}}" class="form-control input-sm">
+                <input id="tc_join_date" type="text" name="tc_join_date" value="{{tc_join_date}}" class="form-control input-sm">
             </div>
         </div>
         <div class="form-group">
@@ -68,9 +71,9 @@
                 <label class="radio-inline">
                     <input type="radio" name="tc_gender" value="1" {{tc_gender==1?'checked':''}} > 女
                 </label>
-
             </div>
         </div>
+
         <div class="form-group">
             <div class="col-xs-7">
                 <button type="submit" class="btn btn-success btn-sm pull-right"> {{ tc_id?'编辑':'添加' }} </button>
@@ -78,10 +81,6 @@
         </div>
     </form>
 </script>
-
 <?php include('../common/script.html')?>
-
-
-
 </body>
 </html>

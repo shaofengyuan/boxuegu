@@ -1,4 +1,4 @@
-define(["jquery","nprogress"],function($,NProgress){
+define(["jquery","nprogress",'jqureyCookie'],function($,NProgress,undefined){
 	//进度条
 	NProgress.start();
 	NProgress.done();
@@ -33,16 +33,15 @@ define(["jquery","nprogress"],function($,NProgress){
 	});
 
 	// 获取本地cookie用户信息，同时做容错处理
-	var userInfo = null;
+
 	try {
-		userInfo = JSON.parse($.cookie('userInfo'))
+		var userInfo = JSON.parse($.cookie('userInfo'))
 	}catch(e) {
 		userInfo = {};
 	}
 
+
 	// 然后展示到左侧导航
-	$('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name: 'doudou');
+	$('#userName').html(userInfo.tc_name? userInfo.tc_name: 'doudou');
 	$('.aside .profile img').attr('src', userInfo.tc_avatar? userInfo.tc_avatar: '/images/default.png');
-
-
 })

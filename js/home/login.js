@@ -6,9 +6,9 @@ define(['jquery','jqureyCookie'],function ($,undefined) {
 	 * 3、设置登陆页的img-src为对象中的tc_avatar属性值，如果没有给一个默认头像的地址
 	 */
 
-	var userInfo = null;
+
 	try{
-		userInfo = JSON.parse($.cookie('userInfo'))
+		var userInfo = JSON.parse($.cookie('userInfo'))
 	}catch (e){
 		userInfo = {};
 	};
@@ -29,6 +29,7 @@ define(['jquery','jqureyCookie'],function ($,undefined) {
 				// 如果登陆成功，使用cookie的方式保存用户信息，
 				// 注意：cookie值必须为字符串，我们得到的是js对象，需要使用JSON.stringify进行转换
 				if (data.code == 200){
+					$.cookie('userInfo',JSON.stringify(data.result),{path:'/'});
 					location.href = '/';
 				}
 			}

@@ -9,6 +9,7 @@ requirejs.config({
 		nprogress:'lib/nprogress/nprogress',
 		template: 'lib/artTemplate-3.0.1/template',
 		common: 'js/common/common',
+		foundationDatepicker:'/lib/Datepicker/js/foundation-datepicker',
 
 		// 自己写的路径配置
 		index:'js/index',
@@ -27,6 +28,7 @@ requirejs.config({
 		courseCategoryAdd: 'js/course/category_add',
 		courseCategoryList: 'js/course/list',
 		courseCategoryTopic: 'js/course/topic',
+		runDate:'/js/date'
 	},
 	shim: {
 		bootstrap: {
@@ -76,7 +78,7 @@ require(['jquery','bootstrap','common']);
 				require(['userProfile']);
 				break;
 			case '/html/teacher/teacher_add.html':
-				require(['teacherAdd']);
+				require(['teacherAdd','runDate']);
 				break;
 			case '/html/teacher/teacher_list.html':
 				require(['teacherList']);
