@@ -10,6 +10,9 @@ requirejs.config({
 		template: 'lib/artTemplate-3.0.1/template',
 		common: 'js/common/common',
 		foundationDatepicker:'/lib/Datepicker/js/foundation-datepicker',
+		region:'/lib/region/jquery.region',
+		ckeditor:'/lib/ckeditor/ckeditor',
+
 
 		// 自己写的路径配置
 		index:'js/index',
