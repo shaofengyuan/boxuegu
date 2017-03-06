@@ -36,4 +36,8 @@ define(['jquery','template','common','ckeditor'],function ($,template,undefined,
 		$('.course-add').html(template('courseAdd1',{}));
 	}
 
+	//步骤选择
+	$('.forwards>li:eq(0)>a').addClass('active');
+	//侧边下拉
+	$('.list-unstyled').eq(1).show().find('li').eq(0).find('a').addClass('active')
 })
