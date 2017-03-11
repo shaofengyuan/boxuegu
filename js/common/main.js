@@ -3,11 +3,11 @@ requirejs.config({
 	paths: {
 
 		// 第三方库的路径配置
-		jquery: 'lib/jquery/jquery.min',
-		bootstrap: 'lib/bootstrap/js/bootstrap.min',
+		jquery: 'node_modules/jquery/dist/jquery.min',
+		bootstrap: 'node_modules/bootstrap/dist/js/bootstrap',
 		jqureyCookie:'lib/jquery-cookie/jquery.cookie',
 		nprogress:'lib/nprogress/nprogress',
-		template: 'lib/artTemplate-3.0.1/template',
+		template: 'node_modules/art-template/dist/template',
 		common: 'js/common/common',
 		foundationDatepicker:'/lib/Datepicker/js/foundation-datepicker',
 		region:'/lib/region/jquery.region',
